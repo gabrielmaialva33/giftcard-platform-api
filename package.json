@@ -1,8 +1,19 @@
 {
   "name": "giftcard-platform-api",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "author": {
+    "name": "Gabriel M.",
+    "email": "gabrielmaialva33@gmail.com",
+    "url": "https://github.com/gabrielmaialva33"
+  },
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.16.0",
+    "npm": ">=10.9.2",
+    "pnpm": ">=10.11.0",
+    "yarn": ">=1.22.22"
+  },
   "license": "UNLICENSED",
   "scripts": {
     "start": "node bin/server.js",
@@ -41,6 +52,7 @@
     "@japa/plugin-adonisjs": "^4.0.0",
     "@japa/runner": "^4.2.0",
     "@swc/core": "1.11.24",
+    "@types/jsonwebtoken": "^9.0.9",
     "@types/luxon": "^3.6.2",
     "@types/node": "^22.15.18",
     "@types/qrcode": "^1.5.5",
@@ -64,6 +76,7 @@
     "@vinejs/vine": "^3.0.1",
     "axios": "^1.9.0",
     "dayjs": "^1.11.13",
+    "jsonwebtoken": "^9.0.2",
     "luxon": "^3.6.1",
     "nanoid": "^5.1.5",
     "pg": "^8.16.0",
@@ -77,5 +90,6 @@
       "./app/middleware/*.ts"
     ]
   },
-  "prettier": "@adonisjs/prettier-config"
+  "prettier": "@adonisjs/prettier-config",
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }

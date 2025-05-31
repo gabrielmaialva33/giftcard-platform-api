@@ -6,11 +6,25 @@ export default defineConfig({
     host: env.get('QUEUE_REDIS_HOST'),
     port: env.get('QUEUE_REDIS_PORT'),
     password: env.get('QUEUE_REDIS_PASSWORD'),
+    db: 1, // Use different DB from cache
   },
 
-  queue: {},
+  queue: {
+    defaultJobOptions: {
+      removeOnComplete: 100,
+      removeOnFail: 1000,
+      attempts: 3,
+      backoff: {
+        type: 'exponential',
+        delay: 5000,
+      },
+    },
+  },
 
-  worker: {},
+  worker: {
+    concurrency: 5,
+    maxStalledCount: 1,
+  },
 
   jobs: {
     /*
@@ -40,6 +54,6 @@ export default defineConfig({
     |
     */
     removeOnComplete: 100,
-    removeOnFail: 100,
+    removeOnFail: 1000,
   },
 })

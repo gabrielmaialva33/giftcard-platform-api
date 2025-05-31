@@ -1,5 +1,5 @@
 export enum UserRole {
-  FRANQUEADORA = 'franqueadora',
-  FRANQUEADO = 'franqueado',
-  ESTABELECIMENTO = 'estabelecimento',
+  FRANCHISOR = 'franchisor',
+  FRANCHISEE = 'franchisee',
+  ESTABLISHMENT = 'establishment',
 }

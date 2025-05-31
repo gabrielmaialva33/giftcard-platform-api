@@ -55,6 +55,8 @@ export default defineConfig({
     () => import('@adonisjs/cache/cache_provider'),
     () => import('@rlanz/bull-queue/queue_provider'),
     () => import('@adonisjs/drive/drive_provider'),
+    // Add your custom providers here
+    () => import('#providers/app_provider'),
   ],
 
   /*

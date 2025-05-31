@@ -3,7 +3,7 @@ import type { NextFn } from '@adonisjs/core/types/http'
 import type { Authenticators } from '@adonisjs/auth/types'
 
 /**
- * Auth middleware is used authenticate HTTP requests and deny
+ * Auth middleware is used to authenticate HTTP requests and deny
  * access to unauthenticated users.
  */
 export default class AuthMiddleware {
@@ -20,6 +20,7 @@ export default class AuthMiddleware {
     } = {}
   ) {
     await ctx.auth.authenticateUsing(options.guards, { loginRoute: this.redirectTo })
+    ctx['loggedUser'] = ctx.auth.user as any
     return next()
   }
 }

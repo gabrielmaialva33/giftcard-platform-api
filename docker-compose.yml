@@ -7,15 +7,15 @@ services:
     ports:
       - '5432:5432'
     environment:
-      POSTGRES_USER: giftcard
-      POSTGRES_PASSWORD: giftcard123
-      POSTGRES_DB: giftcard_platform
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
       POSTGRES_INITDB_ARGS: '-E UTF8 --locale=en_US.UTF-8'
     volumes:
       - timescale_data:/home/postgres/pgdata/data
       - ./database/docker/init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -U giftcard']
+      test: [ 'CMD-SHELL', 'pg_isready -U postgres' ]
       interval: 10s
       timeout: 5s
       retries: 5

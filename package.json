@@ -44,7 +44,8 @@
     "#modules/*": "./app/modules/*",
     "#shared/*": "./app/shared/*",
     "#enums/*": "./app/enums/*.js",
-    "#jobs/*": "./app/jobs/*.js"
+    "#jobs/*": "./app/jobs/*.js",
+    "#extensions/*": "./app/extensions/*.js"
   },
   "devDependencies": {
     "@adonisjs/assembler": "^7.8.2",

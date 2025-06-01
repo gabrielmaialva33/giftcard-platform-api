@@ -4,6 +4,8 @@ declare module '@adonisjs/core/http' {
   export interface HttpContext {
     getLoggedUserId: (loggedUserId: number) => number
     loggedUserId: number
+    loggedUser: any
+    locale: string
   }
 }
 
